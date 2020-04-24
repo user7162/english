@@ -3,54 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>English</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    .left-body ul {
-        list-style: none; /* ol, ul 옆에 점이나 숫자들을 안 보이게 해주는 속성 */  
-    }
-    .main-body {
-        display: grid;
-        grid-template-columns: 196px 1fr;
-    }
-    body {
-        font-family: 'dinregular', arial;
-        line-height: 1.4;
-    }
-    ul li {
-        list-style: none; /* ol, ul 옆에 점이나 숫자들을 안 보이게 해주는 속성 */  
-    }
-    
-
-/*
-    ul ul {display: none;}
-    ul li:hover > ul {display: block;}
-    마우스를 대면 하위 메뉴가 펼쳐지는 css
-*/
-
-/*
-
-.main-body .left-body nav ul li.menu-item-has-children ul{
-  display:none;
-}
-.main-body .left-body nav ul li.menu-item-has-children ul li a{
-  color:#a7a9ac;
-}
-.main-body .left-body nav ul li.menu-item-has-children ul li a:hover{
-  color:#000; border-bottom:0px;
-}
-    
-*/
-    
+<style>  
 </style>
-
 <body>
-<div class="main-body">
-    <div class="left-body">
+    
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script> 
+<!--(서브 메뉴 숨김 출처, https://stove99.tistory.com/103#rp)-->
+
+<div class="container">
+    <div class="item item-nav">
         <nav>
-            <ul> 
-                <li class="menu-item-has-children"><a href="#">Grammar</a>
-                    <ul>
-                        <li><a href="sentence_structure.html" title="문장 구조의 이해">Sentence Structure</a></li>
+            <ul>
+               <li class="menu"><a href="#">Grammar</a>
+                    <ul class="sub-menu">
                         <li><a href="subject_verb.html" title="주어, 동사">Subject, verb</a></li>
                         <li><a href="subject_verb_agreement.html" title="주어와 동사의 수일치">Subject and verb agreement</a></li>
                         <li><a href="tense.html" title="시제">Tense</a></li>
@@ -64,56 +31,46 @@
                         <li><a href="noun.html" title="명사">Noun</a></li>
                         <li><a href="determiner.html" title="한정사">Determiner</a></li>
                         <li><a href="pronoun.html" title="대명사">Pronoun</a></li>
-                        <li><a href="adjective.html" title="형용사">adjective</a></li>
-                        <li><a href="adverb.html" title="부사">adverb</a></li>
+                        <li><a href="adjective.html" title="형용사">Adjective</a></li>
+                        <li><a href="adverb.html" title="부사">Adverb</a></li>
                         
-                        <li><a href="relative_clause.html" title="관계절, 접속사와 대명사의 특성을 지니며 명사를 수식하는 기능, 수식받는 명사는 선행사라 한다.">relative clause</a></li>
+                        <li><a href="relative_clause.html" title="관계절, 접속사와 대명사의 특성을 지니며 명사를 수식하는 기능, 수식받는 명사는 선행사라 한다.">Relative clause</a></li>
                         <li><a href="preposition.html" title="전치사">Preposition</a></li>
                         <li><a href="conjunction.html" title="접속사">Conjunction</a></li>
                         <li><a href="english_special_constructions.html" title="특수구문">English special constructions</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Video</a></li>
-                    <ul>
-                        <li><a href="WWB_list.html">We bare bears</a></li>
+                <li class="menu"><a href="#">Media</a>
+                    <ul class="sub-menu">
+                        <li><a href="lyrics.html" title="가사">Lyrics</a></li>
                     </ul>
-                <li class="menu-item-has-children"><a href="#">Vocabulary</a>
-                    <ul>
-                       <li><a href="synonym.html" title="동의어">synonym</a></li>
-                       <li><a href="Vocabulary.html" title="어휘">vocabulary</a></li>
-                       <li><a href="phrasal_verb.html" title="구동사">phrasal_verb</a></li>
+                </li>
+                <li class="menu"><a href="#">Vocabulary</a>
+                    <ul class="sub-menu">
+                       <li><a href="synonym.html" title="동의어">Synonym</a></li>
+                       <li><a href="Vocabulary.html" title="어휘">Vocabulary</a></li>
+                       <li><a href="phrasal_verb.html" title="구동사">Phrasal_verb</a></li>
                     </ul>
                 </li>
             </ul>
-<!--
-    <li class="newsletter">
-    <a href="#" onclick="toggle_visibility('news');" name="Mailing List">Mailing List</a>
-    <div id="news" style="display: none;">
-      <div class="klaviyo-form-QmaDEZ klaviyo-form form-version-cid-1"><div class="ResetElements__Div-sc-8e6zl9-0 gUoYgx needsclick undefined"><form class="ResetElements__Form-sc-8e6zl9-1 View__FormView-sc-1ou3cq2-0 beMTNp klaviyo-form-version-cid_1 needsclick klaviyo-form-version-cid_1" novalidate="" tabindex="-1"><div class="ResetElements__Div-sc-8e6zl9-0 Column__FormColumn-z5j99u-0 Ndwyt needsclick undefined"><div class="ResetElements__Div-sc-8e6zl9-0 Row__FormRow-sc-17nghml-0 kgtZaW needsclick undefined"><div class="ResetElements__Div-sc-8e6zl9-0 FormComponent__StyledFormComponentWrapper-e0xun6-0 jVtsVc needsclick undefined"><div class="ResetElements__Div-sc-8e6zl9-0 TextInput__StyledInputContainer-sc-1o6de9f-1 bQDdTc needsclick undefined"><input type="email" name="email" tabindex="0" placeholder="EMAIL" aria-label="EMAIL" aria-invalid="false" class="ResetElements__Input-sc-8e6zl9-8 FUXqS TextInput__FormStyledTextInput-sc-1o6de9f-0 kUrPQL needsclick TextInput__FormStyledTextInput-sc-1o6de9f-0 kUrPQL" value=""><div class="ResetElements__Div-sc-8e6zl9-0 ValidationMessage__Container-sc-1agouhi-0 kKQEmZ needsclick undefined"></div></div></div></div><div class="ResetElements__Div-sc-8e6zl9-0 Row__FormRow-sc-17nghml-0 kgtZaW needsclick undefined"><div class="ResetElements__Div-sc-8e6zl9-0 FormComponent__StyledFormComponentWrapper-e0xun6-0 kSgDTh needsclick undefined"><button type="button" tabindex="0" class="ResetElements__Button-sc-8e6zl9-2 Button__FormStyledButton-p2mbjt-0 dPCtPa needsclick undefined">Subscribe</button></div></div></div><input type="submit" tabindex="-1" class="ResetElements__Input-sc-8e6zl9-8 FUXqS View__HiddenSubmit-sc-1ou3cq2-1 dSnrYQ needsclick View__HiddenSubmit-sc-1ou3cq2-1 dSnrYQ" value="Submit"></form></div></div>
-    </div>
-  </li>
-    <script type="text/javascript">
-                function toggle_visibility(id) {
-                var e = document.getElementById(id);
-                if(e.style.display == 'block')
-                   e.style.display = 'none';
-                else
-                   e.style.display = 'block';
-                }
-    </script>
-    https://www.aimeleondore.com/pages/leon-dore 메뉴 토글 
--->
         </nav>
     </div>
- 
-    <div class="right-body">
-        <p>
-            
-        </p>
+     <script>
+		$(document).ready(function(){
+			$(".menu>a").click(function(){
+				$(this).next("ul").toggleClass("sub-menu");
+			});
+		});
+	</script>
+    
+    <div class="item item-content">
+<p>문장 구조의 이해
+1. 문장의 구성 요소
+2. 구와 절
+3. 5문형
+</p>
+        
     </div>
 </div>
-
-
-
 </body>
 </html>
