@@ -85,9 +85,11 @@ table {
     color:#000;
 }
 
+/*
 .menu .sub-menu {
     display:none;
 }
+*/
 
 ul li {
 /*    list-style-type: none; */
@@ -98,10 +100,15 @@ ul li {
     캐스캐이딩이 이럴때 필요한 건가? */  
 }
 
+.container .item-nav nav ul li.menu ul.sub-menu li a {
+    color: #a7a9ac;
+}
+
 .container .item-nav nav ul li.menu ul.sub-menu li a:hover {
-    color:#a7a9ac;
+    color: #000;
     border-bottom:0px;
-/*서브 메뉴 색은 어찌 바꾸나?*/
+/*서브 메뉴 색은 어찌 바꾸나?
+.menu .sub-menu css부분을 주석처리하니까 서브메뉴 색 바꾸는 css가 적용되네?*/
 }
 
 a {
