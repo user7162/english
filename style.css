@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+b, i, u, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -55,33 +55,42 @@ table {
 
 
 
+
+
 .container {
     display: grid;
     grid-template-columns: 196px 1fr;
     vertical-align: top;
     max-width: 1000px;
     font-size: 0;
-    font-family: 'dinregular', arial;
     line-height: 1.8;
+    font-family: 'Spoqa Han Sans';
 }
 
-.item {
+.item-nav, .item-content {
     font-size: 0.9rem;
     padding-top: 20px;
     padding-left: 20px;
-    
 }
 
 .item-nav {
-    list-style: none; /* ol, ul 옆에 점이나 숫자들을 안 보이게 해주는 속성 */
+    list-style: none; /* ol, ul 옆에 점이나 숫자를 안 보이게 해주는 속성 */
     text-decoration: underline;
 }
 
-.menu a{cursor:pointer;}
+.menu a{
+    cursor:pointer;
+    text-decoration: none;
+    /*    .item item-nav에 직접 style="text-decoration: none;"을 주니 이제야 링크 밑줄이 사라짐*/
+    color:#000;
+}
 
-.menu .sub-menu{display:none;}
+.menu .sub-menu {
+    display:none;
+}
 
 ul li {
+/*    list-style-type: none; */
     list-style: none; 
     /* ol, ul 옆에 점이나 숫자들을 안 보이게 해주는 속성
     a 태그에 색상이나 밑줄 등등을 넣어주려고 해도 되지 않다가
@@ -89,20 +98,21 @@ ul li {
     캐스캐이딩이 이럴때 필요한 건가? */  
 }
 
+.container .item-nav nav ul li.menu ul.sub-menu li a:hover {
+    color:#a7a9ac;
+    border-bottom:0px;
+/*서브 메뉴 색은 어찌 바꾸나?*/
+}
+
 a {
-    text-decoration: none; 
-    color:#000;
+    text-decoration: none;
+    color:#0066ff;
 }
 
 a:hover {
-    color:#000;
     border-bottom: 1px solid #000;
 }
 
-.sub-menu a{
-  color:#a7a9ac;
-}
-/*서브 메뉴 색은 어찌 바꾸나?*/
 
 .item-content {
     padding-left: 50px;
@@ -114,6 +124,53 @@ p {
     word-wrap: break-word;
     word-break: break-all;
 }
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    border-bottom: 1px solid #000;
+    padding-top: 60px;
+}
+
+b {
+    font-weight: bold;
+}
+
+.toggle_button {
+    cursor:pointer;
+    display:block;
+}
+
+#toggle_button, #toggle_contents {
+    height:0;
+    overflow:hidden;
+    position:absolute;
+}
+
+#toggle_button:checked + #toggle_contents {
+    height:auto;
+    position:relative;
+/*    border:1px solid #ccc;*/
+    border-top:0;
+    padding:10px;
+}
+
+.close_button {
+    cursor:pointer;
+    position:relative;
+    top:5px;
+    right:5px;
+    padding:3px;
+    font-size:10px;
+    line-height:1;
+    background:#dc143c;
+    color:#fff;
+}
+
+@import url(//spoqa.jithub.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 /*
     ul ul {display: none;}
