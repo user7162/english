@@ -7,11 +7,11 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, strong, tt, var,
 b, i, u, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody, tfoot, thead, tr, th, td, 
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -61,7 +61,7 @@ table {
     display: grid;
     grid-template-columns: 196px 1fr;
     vertical-align: top;
-    max-width: 1000px;
+    max-width: 1300px;
     font-size: 0;
     line-height: 1.8;
     font-family: 'Spoqa Han Sans';
@@ -108,7 +108,10 @@ ul li {
     color: #000;
     border-bottom:0px;
 /*서브 메뉴 색은 어찌 바꾸나?
-.menu .sub-menu css부분을 주석처리하니까 서브메뉴 색 바꾸는 css가 적용되네?*/
+.menu .sub-menu css부분을 주석처리하니까 서브메뉴 색 바꾸는 css가 적용되네?
+https://www.aimeleondore.com/pages/leon-dore 이 사이트에 있는 목록과 동일하게 해보려
+했지. 서브 메뉴를 감추려 js.파일을 가져다 첨부하니 github에서 적용이 안돼, js.파일을
+빼고 올리니 서브메뉴 색이 바뀌는 css가 이제야 적용이 되고, 왜 다 같이는 적용이 되지 않는 걸까*/
 }
 
 a {
@@ -176,6 +179,11 @@ b {
     background:#dc143c;
     color:#fff;
 }
+
+.memory {
+    border-bottom: 1px solid yellow;
+}
+
 
 @import url(//spoqa.jithub.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
